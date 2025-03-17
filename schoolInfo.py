@@ -5,8 +5,8 @@ import requests
 key = ""
 
 
-def timetable(school: str, grade: str, class_name: str):
-    if school == '' or grade == '' or class_name == '':
+def schoolInfo(school: str):
+    if school == "" or school == None:
         return 1
     try:
         res = requests.get(f'https://open.neis.go.kr/hub/schoolInfo?SCHUL_NM={school}&Type=json&key={key}')
